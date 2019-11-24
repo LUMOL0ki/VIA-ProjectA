@@ -1,0 +1,121 @@
+*{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.locationCity,
+.location, 
+.temperature{
+    height: 25vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.temperature{
+    flex-direction: column;
+    height: 30vh;
+    width: 30%;
+    background-color:rgba(255, 255, 255, 0.151);
+}
+
+.temperature p{
+    font-size: 30px;
+}
+
+.temperatureContainer{
+    width: 100%;
+    height: 30vh;
+    justify-content: space-around;
+    font-size: 20px;
+    display: flex;
+}
+
+.temperatureDegree{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.degreeUnit
+{
+    margin: 10px;
+    font-size: 40px;
+}
+
+.degreeToday,
+.degreeTomorow,
+.degreeAfterTomorow
+{
+    font-size: 40px;
+}
+
+.container {
+    width: 100%;
+    margin-top: 50px;
+    height: 100px;
+    max-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#location-input-section{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 5px;
+    max-width: 600px;
+}
+
+#map{
+    width: 96.7%;
+    margin: 10px;
+    max-height: 50vh;
+}
+
+.search{
+    width: 60px;
+    border: none;
+    margin-right: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.search:hover{
+    background-color: rgba(255, 255, 255, 0.726);
+}
+
+@media only screen and (max-width: 600px) {
+    html, body{
+        height: 200vh;
+        background: rgb(15, 125, 228);
+        display: unset;
+    }
+
+    .temperature{
+        width: 100%;
+    }
+
+    .temperatureContainer{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+}
