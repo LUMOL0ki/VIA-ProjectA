@@ -11,7 +11,7 @@ $("bode").css('font-family', 'sans-serif');
     var searchButton = document.getElementById('search');
     var geocoder;
 
-    //On load
+    //On page load
     function init() {
         var locationButton = document.getElementById("location-button");
         locationButton.addEventListener("click", locatorButtonPressed, false); 
@@ -23,6 +23,7 @@ $("bode").css('font-family', 'sans-serif');
         searchButton.addEventListener("click", search, false);
     }
 
+    //After button pressed
     function search(){
         geocoder.geocode( { 'address': input.value}, function(results, status) {
             if (status == 'OK') {
@@ -40,6 +41,7 @@ $("bode").css('font-family', 'sans-serif');
         });
     }
 
+    //Get weather info
     function getWeather(lat, long){
         let language = "en";
 
@@ -83,6 +85,7 @@ $("bode").css('font-family', 'sans-serif');
         });
     }
 
+    //Init weather
     function initWeather(){
         let longitute;
         let latitute;   
